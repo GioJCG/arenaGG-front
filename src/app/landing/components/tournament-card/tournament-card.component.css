@@ -1,33 +1,42 @@
 .tournament-card {
-  border: 1px solid #1d2d44;
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: #1d2d44;
+  border: 1px solid #26385f;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
   color: white;
-  max-width: 500px;
+  gap: 1rem;
 }
 
-.game-badge {
-  color: white;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  display: inline-block;
-  margin-bottom: 0.5rem;
+.game-icon {
+  width: 125px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
 }
 
+/*pasa pasarlo horizontal*/
 .tournament-details {
   display: flex;
+  flex: 1;
   justify-content: space-between;
-  margin-top: 0.5rem;
+  align-items: center;
+  font-size:25px;
+
+  gap: 0.5rem;
 }
 
 .date {
-  color: #ccc;
+  color: #ffffff;
 }
 
 .prize {
+  color: #ffffff;
   font-weight: bold;
-  color: #ffd700;
 }
+
+
