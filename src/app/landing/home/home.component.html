@@ -1,0 +1,30 @@
+<div class="landing-container">
+  <app-header></app-header>
+
+  <main class="main-content">
+    <div class="content-wrapper">
+      <!-- Columna de la imagen -->
+      <div class="image-column">
+        <img src="../../../assets/images/Landing_image.png" alt="Imagen landing" class="featured-image">
+      </div>
+      <div class="content-column">
+        <section class="hero">
+        </section>
+
+        <section class="tournaments-section">
+          <h2>NEXT TOURNAMENTS</h2>
+          
+          <app-tournament-card
+            *ngFor="let tournament of tournaments"
+            [game]="tournament.game"
+            [title]="tournament.title"
+            [date]="tournament.date"
+            [prize]="tournament.prize">
+          </app-tournament-card>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <app-footer></app-footer>
+</div>

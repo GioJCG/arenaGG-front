@@ -1,0 +1,33 @@
+.tournament-card {
+  border: 1px solid #1d2d44;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #1d2d44;
+  color: white;
+  max-width: 500px;
+}
+
+.game-badge {
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.tournament-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.date {
+  color: #ccc;
+}
+
+.prize {
+  font-weight: bold;
+  color: #ffd700;
+}
