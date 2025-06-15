@@ -6,3 +6,20 @@
     <span class="prize">{{ prize }}</span>
   </div>
 </div>
+
+<ng-container *ngIf="showStats">
+  <div class="tournament-stats">
+    <div class="stat-box">
+      <span class="label">TOURNAMENTS HELD</span>
+      <span class="value">{{ statsHeld }}</span>
+    </div>
+    <div class="stat-box">
+      <span class="label">REGISTERED PLAYERS</span>
+      <span class="value">{{ statsPlayers }}</span>
+    </div>
+  </div>
+</ng-container>
+
+
+
+
