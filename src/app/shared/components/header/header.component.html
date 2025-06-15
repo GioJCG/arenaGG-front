@@ -1,7 +1,14 @@
-<header class="navbar">
-  <button class="nav-button">ARENAGG</button>
-  <button class="nav-button">MAIN</button>
-  <button class="nav-button">TOURNAMENTS</button>
-  <button class="nav-button">RANKING</button>
-  <button class="nav-button">LOGIN</button>
-</header>
+<div class="navbar-wrapper">
+  <div class="navbar">
+    <button class="nav-button">ARENAGG</button>
+
+    <button class="hamburger" (click)="toggleMenu()">☰</button>
+
+    <div class="nav-center" [class.open]="menuOpen">
+      <button class="nav-button">MAIN</button>
+      <button class="nav-button">TOURNAMENTS</button>
+      <button class="nav-button">RANKING</button>
+    </div>
+    <button class="nav-button">LOGIN</button>
+  </div>
+</div>
