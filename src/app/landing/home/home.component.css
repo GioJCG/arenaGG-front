@@ -20,10 +20,10 @@
 }
 
 .image-column {
-  flex: 0 0 85%; /* Más ancho para resaltar la imagen */
+  flex: 0 0 75%; /* Más ancho para resaltar la imagen */
   display: flex;
   align-items: stretch;
-  margin-left: -200px;
+  margin-left: -5px;
 }
 
 .featured-image {
