@@ -1,25 +1,24 @@
-<div class="tournament-card">
-  <img [src]="image" alt="game image" class="game-icon" />
-
-  <div class="tournament-details">
-    <span class="date">{{ date }}</span>
-    <span class="prize">{{ prize }}</span>
-  </div>
-</div>
-
-<ng-container *ngIf="showStats">
-  <div class="tournament-stats">
-    <div class="stat-box">
-      <span class="label">TOURNAMENTS HELD</span>
-      <span class="value">{{ statsHeld }}</span>
-    </div>
-    <div class="stat-box">
-      <span class="label">REGISTERED PLAYERS</span>
-      <span class="value">{{ statsPlayers }}</span>
+<ng-container *ngIf="!showStats">
+  <div class="tournament-card">
+    <img [src]="image" alt="game image" class="game-icon" />
+    <div class="tournament-details">
+      <span class="date">{{ date }}</span>
+      <span class="prize">{{ prize }}</span>
     </div>
   </div>
 </ng-container>
 
-
-
-
+<ng-container *ngIf="showStats">
+  <div class="tournament-stats">
+    <div class="stat-box">
+    <span class="label">TOURNAMENTS HELD</span>
+    <span class="separator">|</span>
+    <span class="value">{{ statsHeld }}</span>
+</div>
+    <div class="stat-box">
+      <span class="label">REGISTERED PLAYERS</span>
+      <span class="separator">|</span>
+      <span class="value">{{ statsPlayers }}</span>
+    </div>
+  </div>
+</ng-container>
