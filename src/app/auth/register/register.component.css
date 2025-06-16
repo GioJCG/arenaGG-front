@@ -55,11 +55,11 @@
   color: #f0ead2;
   text-align: center;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  font-weight: 900; /* 🔸 Letras gruesas */
+  font-weight: 900; /* Letras gruesas */
 }
 
 .welcome {
-  font-size: 2rem; /* 🔸 Aumenta aquí para texto Welcome */
+  font-size: 2rem; 
   margin-bottom: 2rem;
   line-height: 1.4;
   font-weight: 900;
@@ -73,13 +73,13 @@ form {
 }
 
 form label {
-  font-size: 1.5rem; /* 🔸 Ajusta tamaño etiquetas */
+  font-size: 1.5rem; /* Ajusta tamaño etiquetas */
   text-align: left;
   font-weight: 900;
 }
 
 form input {
-  padding: 1rem; /* 🔸 Más grande */
+  padding: 1rem; /* Más grande */
   background-color: #36506b;
   border: none;
   border-radius: 8px;
@@ -111,7 +111,27 @@ button {
   text-decoration: underline;
 }
 
-/* 🔸 Responsive sin mover imagen */
+.error-message {
+  color: #ff3860;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.error-message div {
+  margin: 0.1rem 0;
+}
+
+input.ng-invalid.ng-touched {
+  border-color: #ff3860;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Responsive sin mover imagen */
 @media (max-width: 768px) {
   .login-container {
     flex-direction: column;
