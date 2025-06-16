@@ -4,32 +4,44 @@
     </div>
   
     <div class="form-section">
-  
-      
       <div class="logo-box">ARENAGG</div>
   
       <div class="login-card">
-        <h2 class="welcome">WELCOME<br />ROOKIE!</h2>
+        <h2 class="welcome">WELCOME<br />ROOKE!</h2>
   
-        <form>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
           <label for="username">Username</label>
-          <input id="username" type="text" />
+          <input id="username" type="text" formControlName="username" />
+          
+          <div class="error-message" *ngIf="username?.invalid && (username?.dirty || username?.touched)">
+            <div *ngIf="username?.errors?.['required']">Username is required</div>
+            <div *ngIf="username?.errors?.['minlength']">Username must be at least 3 characters</div>
+          </div>
   
           <label for="email">Email</label>
-          <input id="email" type="email" />
+          <input id="email" type="email" formControlName="email" />
+          
+          <div class="error-message" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+            <div *ngIf="email?.errors?.['required']">Email is required</div>
+            <div *ngIf="email?.errors?.['email']">Please enter a valid email</div>
+          </div>
   
           <label for="password">Password</label>
-          <input id="password" type="password" />
+          <input id="password" type="password" formControlName="password" />
+          
+          <div class="error-message" *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+            <div *ngIf="password?.errors?.['required']">Password is required</div>
+            <div *ngIf="password?.errors?.['minlength']">Password must be at least 5 characters</div>
+          </div>
   
-          <button type="submit">REGISTER</button>
+          <button type="submit" [disabled]="registerForm.invalid">REGISTER</button>
         </form>
   
         <p class="register">
-          Already have an account? <a href="#">Login</a>
+          Already have an account? <a routerLink="/login">Login</a>
         </p>
       </div>
     </div>
   </div>
   
   <app-footer></app-footer>
-  

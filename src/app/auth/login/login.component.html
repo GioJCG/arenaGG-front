@@ -1,33 +1,46 @@
 <div class="login-container">
-    <div class="image-section">
-      <img src="../../../assets/images/imgLogin.jpg" alt="Gamers" />
-    </div>
-  
-    <div class="form-section">
-  
-      <!-- Rectángulo para ARENAGG -->
-      <div class="logo-box">ARENAGG</div>
-  
-      <!-- Contenedor verde del formulario -->
-      <div class="login-card">
-        <h2 class="welcome">WELLCOME<br />BACK CHAMP!</h2>
-  
-        <form>
-          <label for="username">Username</label>
-          <input id="username" type="text" />
-  
-          <label for="password">Password</label>
-          <input id="password" type="password" />
-  
-          <button type="submit">LOGIN</button>
-        </form>
-  
-        <p class="register">
-          Dont have an acount? <a href="#">Register</a>
-        </p>
+  <div class="image-section">
+    <img src="../../../assets/images/imgLogin.jpg" alt="Gamers" />
+  </div>
+
+  <div class="form-section">
+    <div class="logo-box">ARENAGG</div>
+
+    <div class="login-card">
+      <h2 class="welcome">WELCOME<br />BACK CHAMP!</h2>
+
+      <!-- Mensaje de error general -->
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
       </div>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <label for="username">Username</label>
+        <input id="username" type="text" formControlName="username" 
+               [class.invalid]="username?.invalid && (username?.touched || username?.dirty)" />
+        
+        <div class="field-error" *ngIf="username?.invalid && (username?.touched || username?.dirty)">
+          <div *ngIf="username?.errors?.['required']">Username is required</div>
+          <div *ngIf="username?.errors?.['minlength']">Username must be at least 3 characters</div>
+        </div>
+
+        <label for="password">Password</label>
+        <input id="password" type="password" formControlName="password" 
+               [class.invalid]="password?.invalid && (password?.touched || password?.dirty)" />
+        
+        <div class="field-error" *ngIf="password?.invalid && (password?.touched || password?.dirty)">
+          <div *ngIf="password?.errors?.['required']">Password is required</div>
+          <div *ngIf="password?.errors?.['minlength']">Password must be at least 5 characters</div>
+        </div>
+
+        <button type="submit" [disabled]="loginForm.invalid">LOGIN</button>
+      </form>
+
+      <p class="register">
+        Don't have an account? <a routerLink="/register">Register</a>
+      </p>
     </div>
   </div>
-  
-  <app-footer></app-footer>
-  
+</div>
+
+<app-footer></app-footer>
