@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -41,4 +41,7 @@ export class TournamentCardComponent {
   @Input() showStats: boolean = false;
   @Input() statsHeld?: number;
   @Input() statsPlayers?: number;
+
 }
+
+
