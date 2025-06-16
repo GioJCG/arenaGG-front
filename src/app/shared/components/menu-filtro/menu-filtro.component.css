@@ -1,9 +1,9 @@
 .menu-container {
-  width: 160px;
+  width: 300px;
   padding: 10px;
-  background-color: #020b1b;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Orbitron';
   color: white;
+  margin-left: 15px;
 }
 
 .title-button {
@@ -13,9 +13,10 @@
   font-weight: bold;
   border: none;
   background: none;
-  color: #ffffff;
-  border-bottom: 2px solid #325a9c;
-  font-size: 14px;
+  color: #fefbe5;
+  border-top: 10px solid #748cab;
+  border-bottom: 10px solid #748cab;
+  font-size: 40px;
   letter-spacing: 1px;
 }
 
@@ -23,25 +24,32 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: center;
 }
 
 .game-button {
-  width: 100%;
-  background-color: #fefbe5;
+  width: 80%;
+  background-color: #0d1321;
   border: none;
-  color: #000;
+  color: #f0ebd8;
   padding: 10px 0;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 25px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
 .game-button:hover {
-  background-color: #e0dec7;
+  background-color: #fefbe5;
+  color: black;
 }
 
 .game-button.selected {
   background-color: #fefbe5;
+  color:black ;
+}
+
+.title-button:not(:first-child) {
+  margin-top: 20px;
 }
