@@ -20,4 +20,8 @@ export class HeaderComponent {
   goToLogin() {
     this.router.navigate(['/login']);
   }
+
+  goToRanking(){
+    this.router.navigate(['/ranking']);
+  }
 }
