@@ -1,7 +1,33 @@
 <div class="ranking-conteiner">
-<app-header></app-header>
-<div class="ranking-container">
-  <app-menu-filtro></app-menu-filtro>
- <app-footer></app-footer>
+  <app-header></app-header>
+
+  <div class="ranking-container">
+  
+    <app-menu-filtro></app-menu-filtro>
+
+    
+    <div class="content-container">
+      <div class="ranking-content">
+       
+        <div class="ranking-header">
+          <div>POSICION</div>
+          <div>NAME</div>
+          <div>PLAYED</div>
+          <div>VICTORYS</div>
+          <div>PUNTOS</div>
+        </div>
+
+        <!-- Fila de datos que se llenaría con la api despues -->
+        <div class="ranking-row" *ngFor="let player of players">
+          <div>{{ player.posicion }}</div>
+          <div>{{ player.name }}</div>
+          <div>{{ player.played }}</div>
+          <div>{{ player.victorys }}</div>
+          <div>{{ player.puntos }}</div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <app-footer></app-footer>
 </div>

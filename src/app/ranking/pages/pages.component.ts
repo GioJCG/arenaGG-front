@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../../shared/components/header/header.component';
 import { FooterComponent } from '../../shared/components/footer/footer.component';
-import { CommonModule } from '@angular/common';
 import { MenuFiltroComponent } from '../../shared/components/menu-filtro/menu-filtro.component';
 
 @Component({
@@ -17,5 +17,14 @@ import { MenuFiltroComponent } from '../../shared/components/menu-filtro/menu-fi
   styleUrl: './pages.component.css'
 })
 export class PagesComponent {
-
+  // Simulación de un jugador. Luego se reemplazará con datos desde una API
+  players = [
+    {
+      posicion: 1,
+      name: 'Sakura',
+      played: 10,
+      victorys: 8,
+      puntos: 1450
+    }
+  ];
 }
