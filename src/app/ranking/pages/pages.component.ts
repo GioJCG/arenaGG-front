@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from '../../shared/components/header/header.component';
 import { FooterComponent } from '../../shared/components/footer/footer.component';
 import { CommonModule } from '@angular/common';
+import { MenuFiltroComponent } from '../../shared/components/menu-filtro/menu-filtro.component';
 
 @Component({
   selector: 'app-pages',
@@ -9,7 +10,8 @@ import { CommonModule } from '@angular/common';
   imports: [
     CommonModule,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    MenuFiltroComponent
   ],
   templateUrl: './pages.component.html',
   styleUrl: './pages.component.css'
