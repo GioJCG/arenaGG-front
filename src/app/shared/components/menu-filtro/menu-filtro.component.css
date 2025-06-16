@@ -1,0 +1,47 @@
+.menu-container {
+  width: 160px;
+  padding: 10px;
+  background-color: #020b1b;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+}
+
+.title-button {
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+  border: none;
+  background: none;
+  color: #ffffff;
+  border-bottom: 2px solid #325a9c;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.game-button {
+  width: 100%;
+  background-color: #fefbe5;
+  border: none;
+  color: #000;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.game-button:hover {
+  background-color: #e0dec7;
+}
+
+.game-button.selected {
+  background-color: #fefbe5;
+}
