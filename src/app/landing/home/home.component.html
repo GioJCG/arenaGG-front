@@ -3,12 +3,26 @@
 
   <main class="main-content">
     <div class="content-wrapper">
-      <!-- Columna de la imagen -->
+      <!-- 🔧 Agrupamos imagen + stats en una columna vertical -->
       <div class="image-column">
-        <img src="../../../assets/images/Landing_image.png" alt="Imagen landing" class="featured-image">
+        <div class="image-and-stats">
+          <img src="../../../assets/images/Landing_image.png" alt="Imagen landing" class="featured-image">
+
+          
+          <section class="status-section">
+            <app-tournament-card
+              [showStats]="true"
+              [statsHeld]="stats.tournamentsHeld"
+              [statsPlayers]="stats.registeredPlayers">
+            </app-tournament-card>
+          </section>
+        </div>
       </div>
+
+      <!-- Columna de contenido -->
       <div class="content-column">
         <section class="hero">
+          <!-- Opcional -->
         </section>
 
         <section class="tournaments-section"> 
@@ -21,6 +35,7 @@
             [date]="tournament.date"
             [prize]="tournament.prize">
           </app-tournament-card>
+
         </section>
       </div>
     </div>
