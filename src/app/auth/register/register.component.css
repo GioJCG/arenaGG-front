@@ -1,0 +1,6 @@
+.register-container {
+  background-color: inherit; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
