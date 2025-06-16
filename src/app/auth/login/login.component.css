@@ -27,7 +27,7 @@
   padding: 1rem;
 }
 
-/* 🔸 Rectángulo de ARENAGG */
+/* Rectángulo de ARENAGG */
 .logo-box {
   background-color: #f0ead2;
   color: #000;
@@ -49,11 +49,11 @@
   color: #f0ead2;
   text-align: center;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  font-weight: 900; /* 🔸 Letras gruesas */
+  font-weight: 900;
 }
 
 .welcome {
-  font-size: 2rem; /* 🔸 Aumenta aquí para texto Welcome */
+  font-size: 2rem;
   margin-bottom: 2rem;
   line-height: 1.4;
   font-weight: 900;
@@ -67,19 +67,23 @@ form {
 }
 
 form label {
-  font-size: 1.5rem; /* 🔸 Ajusta tamaño etiquetas */
+  font-size: 1.5rem;
   text-align: left;
   font-weight: 900;
 }
 
 form input {
-  padding: 1rem; /* 🔸 Más grande */
+  padding: 1rem;
   background-color: #36506b;
   border: none;
   border-radius: 8px;
   color: white;
   font-size: 1.1rem;
   font-weight: 900;
+}
+
+form input.invalid {
+  border: 2px solid #ff4d4f;
 }
 
 button {
@@ -92,6 +96,16 @@ button {
   font-size: 1.2rem;
   cursor: pointer;
   margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e0d5b8;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
 }
 
 .register {
@@ -105,7 +119,28 @@ button {
   text-decoration: underline;
 }
 
-/* 🔸 Responsive sin mover imagen */
+/* Mensajes de error */
+.error-message {
+  color: #ff4d4f;
+  background-color: #ffeaea;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.field-error {
+  color: #ff4d4f;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-weight: normal;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .login-container {
     flex-direction: column;
